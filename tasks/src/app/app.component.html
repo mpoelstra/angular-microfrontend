@@ -1,0 +1,8 @@
+<h2>Uw actuele taken</h2>
+<ul class="tasks">
+  <li class="task" [class.completed]="task.completed" *ngFor="let task of tasks">
+      <span>{{task.title}}</span>
+      <button *ngIf="!task.completed" (click)="toggleTask(task)">Markeer als afgehandeld</button>
+      <button *ngIf="task.completed" (click)="toggleTask(task)">Agehandeld</button>
+  </li>
+</ul>
