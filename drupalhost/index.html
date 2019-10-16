@@ -94,6 +94,20 @@
         z-index: -10;
         width: 1920px;
       }
+
+      .element {
+          border: 1px solid green;
+          padding: 2px;
+      }
+
+      .element > span {
+          color: green;
+          font-size: 10px;
+      }
+
+      .taken.element {
+          width: 406px;
+      }
   </style>
 </head>
 <body>
@@ -102,7 +116,10 @@
         <div class="wrapper">
             <nav>
                 <a class="logo" href="#"><img src="images/tkplogo.svg"></a>
-                <tkp-statusbar></tkp-statusbar>
+                <div class="element">
+                    <tkp-statusbar></tkp-statusbar>
+                    <span>runtime loaded: /assets/statusbar/main.js</span>
+                </div>
             </nav>
         </div>
     </header>
@@ -116,8 +133,9 @@
                     </div>
                 </div>
                 <div class="card card--taken">
-                    <div class="taken">
+                    <div class="taken element">
                         <tkp-tasks></tkp-tasks>
+                        <span>runtime loaded: /assets/tasks/main.js</span>
                     </div>
                 </div>
             </div>
